@@ -6,7 +6,7 @@ services:
         build: ./web
         working_dir: /web
         # expose:
-        # - "8003"
+        #     - "8003"
         ports:
             - "8003:8003"
         volumes:
@@ -18,9 +18,11 @@ services:
         # build: ./nginx
         image: nginx:latest
         ports:
-            - "80:80"
+            # - "80:80"
+            - "443:443"
         volumes:
             - ./web:/web
             - ./nginx/log:/var/log/nginx
             - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+            - ./nginx/ssl:/etc/nginx/ssl
             # - ./my_htpasswd:/my_htpasswd

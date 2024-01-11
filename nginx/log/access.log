@@ -1,4 +1,0 @@
-172.18.0.1 - - [10/Jan/2024:15:29:56 +0000] "GET /app/hello HTTP/1.1" 200 282 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:103.0) Gecko/20100101 Firefox/103.0" "-"
-172.18.0.1 - - [10/Jan/2024:15:29:56 +0000] "GET /favicon.ico HTTP/1.1" 404 2207 "http://127.0.0.1/app/hello" "Mozilla/5.0 (X11; Linux x86_64; rv:103.0) Gecko/20100101 Firefox/103.0" "-"
-172.18.0.1 - - [10/Jan/2024:15:30:02 +0000] "GET /app/hello HTTP/1.1" 200 282 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:103.0) Gecko/20100101 Firefox/103.0" "-"
-172.18.0.1 - - [10/Jan/2024:15:30:02 +0000] "GET /app/hello HTTP/1.1" 200 282 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:103.0) Gecko/20100101 Firefox/103.0" "-"
