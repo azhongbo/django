@@ -3,6 +3,7 @@
 ## https://orcahmlee.github.io/devops/nginx-uwsgi-django-root/ ###
 
 
+
 ######## INSTALL Django ##########
 apt install curl net-tools vim
 apt install tzdata
