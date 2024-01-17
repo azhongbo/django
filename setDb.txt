@@ -1,0 +1,25 @@
+## https://medium.com/my-back-end-life/django-orm-%E6%A8%A1%E5%9E%8B%E5%B1%A4-foreignkey-%E5%A4%9A%E5%B0%8D%E4%B8%80-47224074fed8
+#  作者
+class Author(models.Model):
+    name = models.CharField('作者', max_length=30)
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        db_table = 'tb_author'
+
+
+#  書
+class Book(models.Model):
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='book')
+    book_id = models.PositiveIntegerField('編號', default=10001, unique=True)
+    book_name = models.CharField('書名', max_length=50)
+    price = models.DecimalField('(TWD$)', max_digits=4, decimal_places=0)
+
+    def __str__(self):
+        return '編號:{} 作者:{} 書名:{} 價錢:{}'.format(self.book_id, self.author.name, self.book_name, self.price)
+
+    class Meta:
+        db_table = 'tb_book'
